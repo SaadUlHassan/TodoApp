@@ -13,7 +13,7 @@ const TodoHeader = ({ expand, handleExpand }) => {
           id="checked_toggle"
           className={
             todos.filter((item) => item.status === "Completed").length ===
-            todos.length
+            todos.filter((item) => item.status !== "Deleted").length
               ? "fa fa-check"
               : "fa fa-check d-none"
           }
