@@ -5,7 +5,6 @@ import Filters from "../Components/TodoFilters/TodoFilters";
 import ProgressBar from "../Components/ProgressBar/ProgressBar";
 import TodoHeader from "../Components/TodoHeader/TodoHeader";
 import "../Style/style.css";
-import WebAuthn from "../Components/WebAuthn";
 
 const TodoApp = () => {
   const [expand, setExpand] = useState(false);
@@ -16,8 +15,6 @@ const TodoApp = () => {
     }, 2000);
   }, []);
   return (
-    <>
-    <WebAuthn/>
     <div className="container">
       <div className={expand ? "card heighten" : "card"}>
         <TodoHeader expand={expand} handleExpand={() => setExpand(!expand)} />
@@ -27,7 +24,6 @@ const TodoApp = () => {
         <TodoList />
       </div>
     </div>
-    </>
   );
 };
 
